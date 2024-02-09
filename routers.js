@@ -13,16 +13,16 @@ export default function Routers(){
         <NavigationContainer>
             <Pilha.Navigator>
                 <Pilha.Screen
-                    name='Cadastro'
-                    component={Cadastro}
+                    name='Login'
+                    component={Login}
                     options={{
                         headerShown: false
                     }}
                 ></Pilha.Screen>
 
                 <Pilha.Screen
-                    name='Login'
-                    component={Login}
+                    name='Cadastro'
+                    component={Cadastro}
                     options={{
                         headerShown: false
                     }}

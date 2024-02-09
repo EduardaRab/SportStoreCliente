@@ -27,9 +27,9 @@ function Cadastro({navigation}) {
       </View>
       <View style={styles.form}>
         <Subtitulo txt='Preencha seus dados'></Subtitulo>
-        <Input placeholder={'Nome completo'} onChangeText={setNome} type={"text"}></Input>
-        <Input placeholder={'CPF'} onChangeText={setCpf} type={"numeric"}></Input>
-        <Input placeholder={'Senha'} onChangeText={setSenha} secureTextEntry={true} type={"text"}></Input>
+        <Input placeholder={'Nome completo'} onChangeText={setNome} type={"text"} value={nome}></Input>
+        <Input placeholder={'CPF'} onChangeText={setCpf} type={"numeric"} value={cpf}></Input>
+        <Input placeholder={'Senha'} onChangeText={setSenha} secureTextEntry={true} type={"text"} value={senha}></Input>
       </View>
       <Botao txt='CRIAR' onPress={cadastrar}></Botao>
       <Image
