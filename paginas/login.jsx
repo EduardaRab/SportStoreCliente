@@ -20,6 +20,7 @@ function Login({navigation}) {
     else{
       console.log('Não selecionado')
     }
+    navigation.navigate('Home')
   }
 
   return (

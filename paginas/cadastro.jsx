@@ -22,7 +22,7 @@ function Cadastro({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.titulo}>
-        <BtnImagem onPress={() => navigation.navigate('Login')}></BtnImagem>
+        <BtnImagem onPress={() => navigation.navigate('Login')} url={require('../assets/arrow.png')}></BtnImagem>
         <Titulo txt='Sport Store'></Titulo>
       </View>
       <View style={styles.form}>

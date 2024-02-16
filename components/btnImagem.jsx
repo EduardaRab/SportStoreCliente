@@ -1,17 +1,22 @@
 import React from 'react'
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native'
 
-function BtnImagem({onPress}) {
+function BtnImagem({onPress, url, backgroundColor}) {
+    const styleBtn = {
+        backgroundColor,
+        ...styles.imagem
+    }
+
   return (
     <View>
         <TouchableOpacity
             activeOpacity={0.6} 
-            onPress={onPress} 
+            onPress={onPress}
             style={styles.btn}
         >
             <Image 
-                source={require('../assets/arrow.png')}
-                style={styles.imagem}>
+                source={url}
+                style={styleBtn}>
             </Image>
         </TouchableOpacity>
     </View>
@@ -23,6 +28,7 @@ export default BtnImagem
 const styles = StyleSheet.create({
     imagem:{
         width: 40,
-        height: 30,
+        height: 40,
+        borderRadius: 5,
     },
 })
