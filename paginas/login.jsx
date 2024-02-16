@@ -1,29 +1,49 @@
 import React, {useState} from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { StyleSheet, View, Image, Text } from 'react-native'
 import { CheckBox } from 'react-native-elements'
 import Titulo from '../components/titulo'
-import Subtitulo from '../components/subtitulo'
 import Texto from '../components/texto'
 import Input from '../components/input'
 import Botao from '../components/botao'
 
-function Login() {
+function Login({navigation}) {
   const [selecionado, setSelecionado] = useState(false)
+  const [cpf, setCpf] = useState(0)
+  const [senha, setSenha] = useState('')
+
+  const entrar = () => {
+    console.log(cpf)
+    console.log(senha)
+    if (selecionado){
+      console.log('Selecionado')
+    }
+    else{
+      console.log('Não selecionado')
+    }
+  }
 
   return (
     <View style={styles.container}>
       <Image source={require('../assets/profilecircle.png')} style={styles.imagem}></Image>
       <Titulo txt='Conectando'></Titulo>
       <Texto txt='Continue com seus dados'></Texto>
-      <Input placeholder={'CPF'}></Input>
-      <Input placeholder={'Senha'}></Input>
+      <View style={styles.inputs}>
+        <Input placeholder={'CPF'} onChangeText={setCpf} type={'numeric'} value={cpf}></Input>
+        <Input placeholder={'Senha'} onChangeText={setSenha} value={senha} type={'text'} secureTextEntry={true}></Input>
+      </View>
+      <Botao txt='ENTRAR' onPress={entrar}></Botao>
       <CheckBox
         title='Lembre-se de mim'
         checked={selecionado}
         onPress={() => setSelecionado(!selecionado)}
-        style={styles.checkbox}
+        containerStyle={styles.checkboxContainer}
         checkedColor='#3D5920'
       ></CheckBox>
+      <Texto txt='______________________  Novo?  ______________________'></Texto>
+      <View style={styles.btn}>
+        <Botao txt='CRIAR CONTA' onPress={() => navigation.navigate('Cadastro')}></Botao>
+      </View>
+      <Text style={styles.txt}>Ainda não possui uma conta?</Text>
     </View>
   )
 }
@@ -41,8 +61,22 @@ const styles = StyleSheet.create({
     width: 88,
     height: 88,
   },
-  checkbox:{
+  inputs:{
+    marginTop: 25,
+  },
+  btn:{
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  checkboxContainer:{
     backgroundColor: 'transparent',
     borderWidth: 0,
+    margin: 20,
+  },
+  txt:{
+    fontSize: 16,
+    color: 'red',
+    alignSelf: 'flex-start',
+    marginLeft: 15,
   }
 })

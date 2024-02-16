@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     btn:{
         backgroundColor: '#3D5920',
-        width: '50%',
+        width: 200,
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
