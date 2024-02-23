@@ -1,10 +1,13 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import Header from '../components/header'
+import CardInfo from '../components/cardInfo'
 
 function Acompanhar() {
   return (
     <View>
-        <Text>Página de acompanhamento</Text>
+        <Header url={require('../assets/pedido.png')} titulo='Pedidos realizados'></Header>
+        <CardInfo></CardInfo>
     </View>
   )
 }

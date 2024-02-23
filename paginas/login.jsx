@@ -20,8 +20,9 @@ function Login({navigation}) {
     else{
       console.log('Não selecionado')
     }
-    navigation.navigate('Home')
+    navigation.navigate('Tabs') // Navegar para a tela que contém a Bottom Tab Navigator e que abrirá diretamente a home
   }
+  
 
   return (
     <View style={styles.container}>

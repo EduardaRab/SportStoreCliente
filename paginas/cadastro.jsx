@@ -17,6 +17,8 @@ function Cadastro({navigation}) {
     console.log(nome)
     console.log(cpf)
     console.log(senha)
+    alert('Usuário cadastrado!')
+    navigation.navigate('Login')
   }
 
   return (
