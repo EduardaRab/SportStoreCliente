@@ -66,13 +66,6 @@ function Tabs() {
 function MainStack() {
     return (
         <Stack.Navigator>
-            {/* Criando a página do carrinho, apagar essa stack após o fim */}
-            <Stack.Screen
-                name='Acompanhar'
-                component={Acompanhar}
-                options={{ headerShown: false }}
-            ></Stack.Screen>
-
             <Stack.Screen
                 name='Login'
                 component={Login}
