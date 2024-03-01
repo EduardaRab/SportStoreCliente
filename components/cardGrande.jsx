@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Image, StyleSheet } from 'react-native'
-import Texto from './texto'
 import Subtitulo from './subtitulo'
 import Titulo from './titulo'
 

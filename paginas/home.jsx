@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Dimensions, ScrollView  } from 'react-native'
+import { StyleSheet, View, Dimensions, ScrollView } from 'react-native'
 import Header from '../components/header'
 import Card from '../components/card'
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { View } from 'react-native'
 import Header from '../components/header'
 import CardInfo from '../components/cardInfo'
 
-function Acompanhar() {
+function Acompanhar({navigation}) {
   return (
     <View>
-        <Header url={require('../assets/pedido.png')} titulo='Pedidos realizados'></Header>
+        <Header url={require('../assets/pedido.png')} titulo='Pedidos realizados' onPress={() => navigation.navigate('Login')}></Header>
         <CardInfo></CardInfo>
     </View>
   )
